@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Dennis\koreatech_java\.metadata\.plugins\org.eclipse.jdt.core
-2250130128.index
-3271193799.index
