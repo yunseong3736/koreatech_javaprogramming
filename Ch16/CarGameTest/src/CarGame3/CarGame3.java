@@ -1,5 +1,5 @@
 package CarGame3;
-
+//p416
 import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -30,7 +30,7 @@ class MyPanel extends JPanel {
 		
 	}
 	
-	public void paintComponent(Graphics g) {
+	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawImage(img, img_x, img_y, null);
 	}
@@ -51,6 +51,11 @@ class MyPanel extends JPanel {
 		public void mouseDragged(MouseEvent e) {
 			img_x = e.getX();
 			img_y = e.getY();
+			if (img_x + 257> 600) img_x = 600-257;
+			else if (img_x < 0) img_x = 0;
+			if (img_y + 183> 600) img_y = 600-183;
+			else if (img_y < 0) img_y = 0;
+			
 			repaint();
 		}
 	}

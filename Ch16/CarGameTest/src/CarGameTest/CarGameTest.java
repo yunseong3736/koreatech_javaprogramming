@@ -1,5 +1,7 @@
 package CarGameTest;
 //p406
+//책에서는 무명 클래스로 했지만, 이재협 교수님께서 내부 클래스로 구현하는 방법이 더 많이 쓰인다고 하셨다.
+//그렇기에 내부 클래스로 구현했다.
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -23,13 +25,13 @@ class MyPanel extends JPanel {
 			System.exit(1);
 		}
 		
-		addKeyListener(new MyListener());
+		this.addKeyListener(new MyListener());
 		this.requestFocus();
 		this.setFocusable(true);
 		
 	}
 	
-	public void paintComponent(Graphics g) {
+	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawImage(img, img_x, img_y, null);
 	}
